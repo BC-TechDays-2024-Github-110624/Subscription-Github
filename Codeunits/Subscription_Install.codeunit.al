@@ -4,9 +4,8 @@ codeunit 50102 "BCT SubscriptionInstall"
 
     trigger OnInstallAppPerCompany();
     begin
+        AOT_Test();
         // Instantiate variables needed for the extension
-        pba_test();
-        RLAN_Test();
     end;
 
     trigger OnInstallAppPerDatabase();
@@ -15,21 +14,13 @@ codeunit 50102 "BCT SubscriptionInstall"
 
     end;
 
-    local procedure pba_test()
+    local procedure AOT_Test()
     var
-        PBA_Test: Record "PBA Test";
+        AOT_Test: Record AOT_Test;
     begin
-        PBA_Test.Code := 'PBA';
-        PBA_Test.Description := 'PBA Test';
-        if PBA_Test.Insert() then;
-    end;
-
-    local procedure RLAN_Test()
-    var
-        RLANTest: Record "RLAN Test";
-    begin
-        RLANTest.Code := 'RLAN';
-        RLANTest.Description := 'René';
-        if RLANTest.Insert() then;
+        AOT_Test.Init();
+        AOT_Test.Code := 'AOT';
+        AOT_Test.Description := 'Anton';
+        if AOT_Test.Insert() then;
     end;
 }
