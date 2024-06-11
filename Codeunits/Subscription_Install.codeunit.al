@@ -7,6 +7,7 @@ codeunit 50102 "BCT SubscriptionInstall"
         // Instantiate variables needed for the extension
         pba_test();
         RLAN_Test();
+        BF_Test();
     end;
 
     trigger OnInstallAppPerDatabase();
@@ -31,5 +32,16 @@ codeunit 50102 "BCT SubscriptionInstall"
         RLANTest.Code := 'RLAN';
         RLANTest.Description := 'René';
         if RLANTest.Insert() then;
+    end;
+
+    local procedure BF_Test()
+    var
+        BFTest: Record BF_Test;
+    begin
+        BFTest.Init();
+        BFTest.Code := 'BF';
+        BFTest.Description := 'Beatrice Foffani';
+        if not BFTest.Insert() then
+            Clear(BFTest);
     end;
 }
