@@ -1,5 +1,4 @@
 tableextension 50100 "BCT Customer Ext" extends Customer
-// Original Object
 {
     fields
     {
