@@ -1,4 +1,4 @@
-table 50220 "PBA Test"
+table 50220 "KW Test"
 {
     DataClassification = CustomerContent;
     

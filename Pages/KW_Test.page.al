@@ -1,34 +1,34 @@
-page 50220 "PBA Test List"
+page 50220 "KW Test List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "PBA Test";
-    
+    SourceTable = "KW Test";
+
     layout
     {
         area(Content)
         {
             repeater(GroupName)
             {
-                field(Code;Rec.Code)
+                field(Code; Rec.Code)
                 {
                     ApplicationArea = All;
-                    
+
                 }
-                field(Description;Rec.Description)
+                field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
-                    
+
                 }
             }
         }
         area(Factboxes)
         {
-            
+
         }
     }
-    
+
     actions
     {
         area(Processing)
@@ -36,10 +36,10 @@ page 50220 "PBA Test List"
             action(ActionName)
             {
                 ApplicationArea = All;
-                
+
                 trigger OnAction()
                 begin
-                    
+
                 end;
             }
         }

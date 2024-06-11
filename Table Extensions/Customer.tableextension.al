@@ -11,11 +11,11 @@ tableextension 50100 "BCT Customer Ext" extends Customer
         }
         field(50200; "PBA_Test"; Text[50])
         {
-            Caption = 'PBA_Test';
+            Caption='PBA_Test';
         }
-        field(50205; "RLAN Test"; Text[50])
+        field(50201; "KW_Test"; Text[50])
         {
-            DataClassification = ToBeClassified;
+            Caption = 'KW Test';
         }
     }
 }
