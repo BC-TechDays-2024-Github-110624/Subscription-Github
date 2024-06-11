@@ -18,6 +18,21 @@ pageextension 50100 "BCT BusinessManager RC Ext" extends "Business Manager Role 
                 Image = "8ball";
                 RunObject = page BF_TestList;
             }
+            action(AnRa_Test)
+            {
+                Caption = 'AnRa_Test';
+                image = "8ball";
+                RunObject = page AnRa_TestList;
+                ApplicationArea = All;
+            }
+            action("PBA_Test")
+            {
+                Caption = 'Pba Test';
+                image = Import;
+                RunObject = page "PBA Test List";
+                ApplicationArea = All;
+            }
+
         }
         addafter("Create Vendor Payments")
         {
