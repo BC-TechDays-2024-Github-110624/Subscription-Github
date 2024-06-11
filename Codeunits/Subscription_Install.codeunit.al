@@ -13,7 +13,7 @@ codeunit 50102 "BCT SubscriptionInstall"
 
     end;
 
-    procedure AOT_Test()
+    local procedure AOT_Test()
     var
         AOT_Test: Record AOT_Test;
     begin
