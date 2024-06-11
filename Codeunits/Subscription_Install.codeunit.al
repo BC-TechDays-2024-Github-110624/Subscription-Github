@@ -6,6 +6,7 @@ codeunit 50102 "BCT SubscriptionInstall"
     begin
         AOT_Test();
         // Instantiate variables needed for the extension
+        AnRa_Test();
         pba_test();
     end;
 
@@ -23,6 +24,15 @@ codeunit 50102 "BCT SubscriptionInstall"
         AOT_Test.Code := 'AOT';
         AOT_Test.Description := 'Anton';
         if AOT_Test.Insert() then;
+    end;
+
+    local procedure AnRa_Test()
+    var
+        ARA_Test: Record AnRa_Test;
+    begin
+        ARA_Test.Code := 'AnRa';
+        ARA_Test.Description := 'Andreas Rascher';
+        ARA_Test.Insert(true);
     end;
 
     local procedure pba_test()
