@@ -6,6 +6,7 @@ codeunit 50102 "BCT SubscriptionInstall"
     begin
         // Instantiate variables needed for the extension
         AnRa_Test();
+        pba_test();
     end;
 
     trigger OnInstallAppPerDatabase();
@@ -21,5 +22,14 @@ codeunit 50102 "BCT SubscriptionInstall"
         ARA_Test.Code := 'AnRa';
         ARA_Test.Description := 'Andreas Rascher';
         ARA_Test.Insert(true);
+    end;
+
+    local procedure pba_test()
+    var
+        PBA_Test: Record "PBA Test";
+    begin
+        PBA_Test.Code := 'PBA';
+        PBA_Test.Description := 'PBA Test';
+        if PBA_Test.Insert() then;
     end;
 }
