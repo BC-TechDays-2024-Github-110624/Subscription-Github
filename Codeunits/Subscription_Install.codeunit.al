@@ -7,6 +7,7 @@ codeunit 50102 "BCT SubscriptionInstall"
         // Instantiate variables needed for the extension
         pba_test();
         RLAN_Test();
+        JW_Test();
     end;
 
     trigger OnInstallAppPerDatabase();
@@ -31,5 +32,17 @@ codeunit 50102 "BCT SubscriptionInstall"
         RLANTest.Code := 'RLAN';
         RLANTest.Description := 'René';
         if RLANTest.Insert() then;
+    end;
+
+    local procedure JW_Test()
+    var
+        MyTable: Record MyTable;
+    begin
+        if not MyTable.IsEmpty() then
+            exit;
+        MyTable.Init();
+        MyTable.Code := 'JW';
+        MyTable.Description := 'Jens Winberg';
+        MyTable.Insert();
     end;
 }
