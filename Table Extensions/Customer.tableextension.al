@@ -17,7 +17,7 @@ tableextension 50100 "BCT Customer Ext" extends Customer
         }
         field(50208; AnRa_Test; Text[50])
         {
-
+            Caption='AnRa_Test';
         }
         field(50200; "PBA_Test"; Text[50])
         {
