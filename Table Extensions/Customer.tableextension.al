@@ -1,5 +1,4 @@
 tableextension 50100 "BCT Customer Ext" extends Customer
-// Original Object
 {
     fields
     {
@@ -10,9 +9,9 @@ tableextension 50100 "BCT Customer Ext" extends Customer
             CalcFormula = Exist("BCT Customer Subscription" where("Customer No" = field("No."), Active = const(true)));
             Editable = false;
         }
-        field(50200;"PBA_Test";Text[50])
+        field(50200; "KW_Test"; Text[50])
         {
-            Caption='PBA_Test';
+            Caption = 'KW_Test';
         }
-   }
+    }
 }

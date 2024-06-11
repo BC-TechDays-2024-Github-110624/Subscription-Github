@@ -5,7 +5,7 @@ codeunit 50102 "BCT SubscriptionInstall"
     trigger OnInstallAppPerCompany();
     begin
         // Instantiate variables needed for the extension
-        pba_test();
+        kw_test();
     end;
 
     trigger OnInstallAppPerDatabase();
@@ -14,12 +14,12 @@ codeunit 50102 "BCT SubscriptionInstall"
 
     end;
 
-    local procedure pba_test()
+    local procedure kw_test()
     var
-        PBA_Test : Record "PBA Test";
+        KW_Test : Record "KW Test";
     begin
-        PBA_Test.Code:='PBA';
-        PBA_Test.Description:='PBA Test';
-        if PBA_Test.Insert() then ;
+        KW_Test.Code:='KW';
+        KW_Test.Description:='KW Test';
+        if KW_Test.Insert() then ;
     end;
 }
