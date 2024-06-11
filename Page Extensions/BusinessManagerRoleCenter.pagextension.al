@@ -26,6 +26,14 @@ pageextension 50100 "BCT BusinessManager RC Ext" extends "Business Manager Role 
                 RunObject = page "RLAN Test List";
                 ApplicationArea = All;
             }
+
+            action("BF_Test")
+            {
+                ApplicationArea = All;
+                Caption = 'Test (BF)';
+                Image = "8ball";
+                RunObject = page BF_TestList;
+            }
         }
         addafter("Create Vendor Payments")
         {
