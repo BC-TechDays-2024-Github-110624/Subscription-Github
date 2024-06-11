@@ -5,6 +5,9 @@ codeunit 50102 "BCT SubscriptionInstall"
     trigger OnInstallAppPerCompany();
     begin
         // Instantiate variables needed for the extension
+        JW_Lab_4
+        JW_Test();
+
         pba_test();
         RLAN_Test();
     end;
@@ -14,6 +17,18 @@ codeunit 50102 "BCT SubscriptionInstall"
         // Instantiate variables needed for the extension
 
     end;
+
+
+    local procedure JW_Test()
+    var
+        MyTable: Record MyTable;
+    begin
+        if not MyTable.IsEmpty() then
+            exit;
+        MyTable.Init();
+        MyTable.Code := 'JW';
+        MyTable.Description := 'Jens Winberg';
+        MyTable.Insert();
 
     local procedure pba_test()
     var
