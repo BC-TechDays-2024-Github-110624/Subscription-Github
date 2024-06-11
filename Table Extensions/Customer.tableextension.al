@@ -9,9 +9,13 @@ tableextension 50100 "BCT Customer Ext" extends Customer
             CalcFormula = Exist("BCT Customer Subscription" where("Customer No" = field("No."), Active = const(true)));
             Editable = false;
         }
-        field(50200;"PBA_Test";Text[50])
+        field(50200; "PBA_Test"; Text[50])
         {
-            Caption='PBA_Test';
+            Caption = 'PBA_Test';
         }
-   }
+        field(50205; "RLAN Test"; Text[50])
+        {
+            DataClassification = ToBeClassified;
+        }
+    }
 }
