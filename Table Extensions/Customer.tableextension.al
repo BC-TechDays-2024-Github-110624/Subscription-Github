@@ -23,5 +23,10 @@ tableextension 50100 "BCT Customer Ext" extends Customer
         {
             Caption = 'PBA_Test';
         }
+        field(50209; "BF_Test"; Text[50])
+        {
+            Caption = 'BF Test';
+            DataClassification = CustomerContent;
+        }
     }
 }

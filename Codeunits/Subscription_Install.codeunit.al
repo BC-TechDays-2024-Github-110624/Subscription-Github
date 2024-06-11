@@ -6,6 +6,7 @@ codeunit 50102 "BCT SubscriptionInstall"
     begin
         AOT_Test();
         // Instantiate variables needed for the extension
+        BF_Test();
         AnRa_Test();
         pba_test();
     end;
@@ -14,6 +15,17 @@ codeunit 50102 "BCT SubscriptionInstall"
     begin
         // Instantiate variables needed for the extension
 
+    end;
+
+    local procedure BF_Test()
+    var
+        BFTest: Record BF_Test;
+    begin
+        BFTest.Init();
+        BFTest.Code := 'BF';
+        BFTest.Description := 'Beatrice Foffani';
+        if not BFTest.Insert() then
+            Clear(BFTest);
     end;
 
     local procedure AOT_Test()
