@@ -15,5 +15,9 @@ tableextension 50100 "BCT Customer Ext" extends Customer
             DataClassification = CustomerContent;
             Caption = 'AOT_Test';
         }
+        field(50220; "PBA_Test"; Text[50])
+        {
+            Caption = 'PBA_Test';
+        }
     }
 }
